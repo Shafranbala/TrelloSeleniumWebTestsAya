@@ -12,13 +12,14 @@ public class HeaderHelper extends HelperBase {
         click(By.xpath("//button[@data-test-id='header-create-menu-button']"));
     }
 
-    public void returnOnHomepage(){
+    public void returnOnHomepageFromBoard(){
         waitForElement(By.cssSelector(".mod-list-add-button"), 30);
         click(By.cssSelector("[data-test-id='header-home-button']"));
     }
 
-    public void selectCreateBoard(){
-        click(By.xpath("//button[@data-test-id='header-create-board-button']"));
+    public void returnOnHomepageFromTeam(){
+        waitForElement(By.cssSelector(".tabbed-pane-header-content"), 30);
+        click(By.cssSelector("[data-test-id='header-home-button']"));
     }
 
     public boolean isAvatarPresent(){
@@ -36,5 +37,9 @@ public class HeaderHelper extends HelperBase {
 
     private void clickLogOut() {
         click(By.xpath("//button[]@data-test-id='header-member-menu-logout']"));
+    }
+
+    public void clickOnBoardsButton() {
+        click(By.xpath("//button[@data-test-id='header-boards-menu-button']"));
     }
 }

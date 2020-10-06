@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="RegressionTestsWithoutLogin" verbose="1" >
+    <test name="Regression" >
+        <classes>
+            <class name="com.shafranbala.tests.tests.TeamCreationTest" />
+            <class name="com.shafranbala.tests.tests.BoardCreationTrelloTests" />
+            <class name="com.shafranbala.tests.tests.BoardModificationTests" />
+            <class name="com.shafranbala.tests.tests.BoardDeleteTest" />
+        </classes>
+    </test>
+</suite>
